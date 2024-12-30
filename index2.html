@@ -37,10 +37,28 @@
         }
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
         }
         header p {
             margin: 0.5rem 0;
+        }
+        .hire-me-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.7rem 1.5rem;
+            background: white;
+            color: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: transform 0.3s, background 0.3s;
+            border: 2px solid white;
+        }
+        .hire-me-button:hover {
+            background: #007BFF;
+            color: white;
+            transform: scale(1.1);
         }
         nav {
             background: #333;
@@ -48,24 +66,27 @@
             display: flex;
             justify-content: center;
             gap: 1rem;
-            padding: 0.5rem 0;
+            padding: 0.8rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         nav a {
             color: white;
             text-decoration: none;
             padding: 0.5rem 1rem;
-            transition: background 0.3s;
+            font-weight: 700;
+            transition: background 0.3s, transform 0.3s;
         }
         nav a:hover {
             background: #555;
             border-radius: 5px;
+            transform: scale(1.1);
         }
         section {
-            padding: 2rem;
-            max-width: 900px;
+            padding: 2.5rem;
+            max-width: 1000px;
             margin: 0 auto;
             text-align: center;
             animation: fadeIn 1s ease-in-out;
@@ -82,16 +103,24 @@
         }
         h2 {
             color: #007BFF;
-            border-bottom: 2px solid #00c6ff;
+            border-bottom: 3px solid #00c6ff;
             display: inline-block;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
         }
         .skills, .certifications ul, .education ul, .experience ul {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
+            gap: 1.5rem;
             padding: 0;
             list-style: none;
+        }
+        .skills li::before, .certifications li::before, .education li::before {
+            content: "\2022";
+            color: #007BFF;
+            font-weight: bold;
+            display: inline-block;
+            width: 1rem;
         }
         footer {
             background: #333;
@@ -103,27 +132,29 @@
         .button {
             display: inline-block;
             margin-top: 1rem;
-            padding: 0.5rem 1rem;
+            padding: 0.7rem 1.5rem;
             background: linear-gradient(45deg, #007BFF, #00c6ff);
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            transition: transform 0.3s;
+            font-size: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         .button:hover {
-            transform: scale(1.05);
+            transform: scale(1.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
         .experience-item {
             text-align: left;
             margin-bottom: 1rem;
             background: white;
-            padding: 1rem;
+            padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
         .experience-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
         }
     </style>
 </head>
@@ -132,6 +163,11 @@
         <h1>Sindhuja Jayaraman</h1>
         <p>Senior QA Consultant | Scrum Master | 12+ Years of Experience</p>
         <p>Email: sindhus1713@gmail.com | Phone: +91-9900805911</p>
+        <div>
+            <img src="psm_logo.png" alt="PSM I Certification Logo">
+            <img src="istqb_logo.png" alt="ISTQB Certification Logo">
+        </div>
+        <a href="QA Consultant_Scrum Master_Sindhuja Jayaraman.docx" class="hire-me-button">Hire Me</a>
     </header>
 
     <nav>
@@ -145,76 +181,25 @@
     </nav>
 
     <section id="about">
-        <h2>ABOUT ME</h2>
-        <p>Senior QA Consultant with 12+ years experience in enhancing the Quality of the deliverables, combining Agile expertise with robust Quality Assurance skills. Proven success in facilitating Scrum processes, enhancing team performance, and delivering high-quality solutions, managing global teams, and driving continuous improvement. Passionate about aligning cross-functional teams with business goals and contributing to project success.
- Let’s connect to discuss how I can add value to your organization.</p>
+        <h2>About Me</h2>
+        <p>Experienced Senior QA Consultant and Certified Scrum Master with expertise in quality assurance, Agile methodologies, and software testing. Proven track record in leading cross-functional teams, developing QA strategies, and enhancing team productivity. Adept at managing both Scrum and QA functions and ensuring high-quality product delivery.</p>
     </section>
 
-    <section id="SKILLS">
-        <h2>SKILLS</h2>
-        <div class="SKILLS">
-            <div class="skills-item">
-                <h3>Web UI Automation</h3>
-                <p>Selenium using JAVA</p>
-            </div>
-            <div class="skills-item">
-                <h3>API Automation </h3>
-                <ul>
-                    <li>REST Assured</li>
-                    <li>Assert J</li>
-                    <li>TestNG</li>
-                    <li>POSTMAN</li>
-                </ul>
-                </div>
-            <div class="skills-item">
-                <h3>Functional Testing </h3>
-                <ul>
-                    <p>Expertise in Healthcare & Telecom Domains</p>
-                </ul>
-                </div>
-              <div class="skills-item">
-                <h3>Defect Tracking Tools </h3>
-                <ul>
-                    <li>Atlassian JIRA</li>
-                    <li>HP ALM</li>
-                </ul>
-                </div>
-              <div class="skills-item">
-                <h3>Test Management Tool</h3>
-                <ul>
-                    <li>Test Rail</li>
-                </ul>
-                </div>
-               <div class="skills-item">
-                <h3>Project Management Tools </h3>
-                <ul>
-                    <li>JIRA</li>
-                    <li>Confluence</li>
-                    <li>SharePoint</li>
-                    <li>Google Docs</li>
-                    <li>Slack</li>
-                </ul>
-                </div>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills">
+            <li>Web UI Automation - Selenium using JAVA</li>
+            <li>API Automation - Rest Assured, Assert J, TestNG, POSTMAN</li>
+            <li>Functional Testing: Expertise in Healthcare & Telecom Domains</li>
+            <li>Defect Tracking Tools: JIRA, HP ALM</li>
+            <li>Test Management Tool: Test Rail</li>
+            <li>Project Management Tools: Agile (Scrum), JIRA, Confluence, MS Office Suite, Google Docs, SharePoint, Slack</li>
+            <li>Testing Methodology: Agile and Scrum Model, Kanban</li>
+        </ul>
+    </section>
 
-            <style>
-    .skills li {
-        list-style: none;
-        position: relative;
-        padding-left: 30px;
-        line-height: 1.8;
-    }
-
-    .skills li::before {
-        content: "✔"; /* Use a checkmark as the icon */
-        color: #007BFF; /* Icon color */
-        font-size: 1.2rem; /* Icon size */
-        position: absolute;
-        left: 0;
-        top: 0;
-        transform: translateY(5px); /* Align icon vertically */
-    }
-    <section id="EXPERIENCE">
-        <h2>PROFESSIONAL EXPERIENCE</h2>
+    <section id="experience">
+        <h2>Professional Experience</h2>
         <div class="experience">
             <div class="experience-item">
                 <h3>RedCapCloud Inc (2018 - Present)</h3>
@@ -223,8 +208,8 @@
             <div class="experience-item">
                 <h3>Tech Mahindra (2010 - 2018)</h3>
                 <ul>
-                    <li>QA Lead/Scrum Master | Telecom Domain</li>
-                    <li>Test Analyst for British Telecom | Telecom Domain</li>
+                    <li>QA Lead/Scrum Master for Optus Professional Services (Telecom)</li>
+                    <li>Test Analyst for British Telecom (Telecom)</li>
                 </ul>
             </div>
         </div>
@@ -238,8 +223,8 @@
     <section id="education">
         <h2>Education</h2>
         <ul class="education">
-            <li>M.S in Software Engineering- Birla Institute of Technology (7.5 CGPA)</li>
-            <li>Bachelor's in Computer Technology - Anna University (9.2 CGPA)</li>
+            <li>M.S in Software Engineering, Birla Institute of Technology (7.5 CGPA)</li>
+            <li>Bachelor's in Computer Technology, K.S.R. College of Technology (9.2 CGPA)</li>
         </ul>
     </section>
 
@@ -258,7 +243,8 @@
     </section>
 
     <footer>
-        <p>&copy; Created by Sindhuja Jayaraman.</p>
+        <p>&copy; 2024 Sindhuja Jayaraman. All rights reserved.</p>
     </footer>
 </body>
 </html>
+
