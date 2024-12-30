@@ -15,7 +15,7 @@
             overflow-x: hidden;
         }
         header {
-            background: linear-gradient(45deg, #007BFF, #00c6ff);
+            background: black;
             color: white;
             text-align: center;
             padding: 2rem 1rem;
@@ -47,7 +47,7 @@
             margin-top: 1rem;
             padding: 0.7rem 1.5rem;
             background: white;
-            color: #007BFF;
+            color: black;
             text-decoration: none;
             border-radius: 5px;
             font-size: 1rem;
@@ -56,7 +56,7 @@
             border: 2px solid white;
         }
         .hire-me-button:hover {
-            background: #007BFF;
+            background: black;
             color: white;
             transform: scale(1.1);
         }
@@ -156,6 +156,22 @@
         .experience-item:hover {
             transform: translateY(-8px);
         }
+        .education ul {
+            gap: 2rem;
+            justify-items: start;
+        }
+        .education li {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .education li:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -223,8 +239,16 @@
     <section id="education">
         <h2>Education</h2>
         <ul class="education">
-            <li>M.S in Software Engineering, Birla Institute of Technology (7.5 CGPA)</li>
-            <li>Bachelor's in Computer Technology, K.S.R. College of Technology (9.2 CGPA)</li>
+            <li>
+                <h3>M.S in Software Engineering</h3>
+                <p>Birla Institute of Technology</p>
+                <p>CGPA: 7.5</p>
+            </li>
+            <li>
+                <h3>Bachelor's in Computer Technology</h3>
+                <p>K.S.R. College of Technology</p>
+                <p>CGPA: 9.2</p>
+            </li>
         </ul>
     </section>
 
@@ -247,5 +271,3 @@
     </footer>
 </body>
 </html>
-
-
