@@ -4,43 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sindhuja Jayaraman - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
             color: #333;
+            background-color: #f9f9f9;
+            overflow-x: hidden;
         }
         header {
-            background: #007BFF;
+            background: linear-gradient(45deg, #007BFF, #00c6ff);
             color: white;
-            padding: 1rem 0;
             text-align: center;
+            padding: 2rem 1rem;
+            position: relative;
+        }
+        header img {
+            height: 80px;
+            margin: 0 10px;
+            vertical-align: middle;
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 0.5rem 0;
+        }
+        nav {
+            background: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 0.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: #555;
+            border-radius: 5px;
         }
         section {
             padding: 2rem;
             max-width: 900px;
             margin: 0 auto;
+            text-align: center;
         }
-        h1, h2 {
+        h2 {
             color: #007BFF;
+            border-bottom: 2px solid #00c6ff;
+            display: inline-block;
+            margin-bottom: 1rem;
         }
-        ul {
-            list-style: none;
+        .skills, .certifications ul, .education ul, .experience ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
             padding: 0;
-        }
-        ul li {
-            margin-bottom: 0.5rem;
+            list-style: none;
         }
         footer {
-            background: #f4f4f4;
-            color: #333;
+            background: #333;
+            color: white;
             text-align: center;
             padding: 1rem 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            margin-top: 2rem;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(45deg, #007BFF, #00c6ff);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .button:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -49,55 +109,78 @@
         <h1>Sindhuja Jayaraman</h1>
         <p>Senior QA Consultant | Scrum Master | 12+ Years of Experience</p>
         <p>Email: sindhus1713@gmail.com | Phone: +91-9900805911</p>
+        <div>
+            <img src="psm_logo.png" alt="PSM I Certification Logo">
+            <img src="istqb_logo.png" alt="ISTQB Certification Logo">
+        </div>
     </header>
 
-    <section>
-        <h2>Professional Summary</h2>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
         <p>Experienced Senior QA Consultant and Certified Scrum Master with expertise in quality assurance, Agile methodologies, and software testing. Proven track record in leading cross-functional teams, developing QA strategies, and enhancing team productivity. Adept at managing both Scrum and QA functions and ensuring high-quality product delivery.</p>
     </section>
 
-    <section>
+    <section id="skills">
         <h2>Skills</h2>
-        <ul>
-            <li>Certified Scrum Master (PSM-1)</li>
-            <li>Project management tools: Atlassian JIRA, Confluence, GitHub</li>
-            <li>Testing Tools: HP ALM, Test Rail, Katalon Studio</li>
-            <li>Agile and Scrum methodologies</li>
-            <li>Business Domains: Health Care, Telecom</li>
+        <ul class="skills">
+            <li>Web UI Automation - Selenium using JAVA</li>
+            <li>API Automation - Rest Assured, Assert J, TestNG, POSTMAN</li>
+            <li>Functional Testing: Expertise in Healthcare & Telecom Domains</li>
+            <li>Defect Tracking Tools: JIRA, HP ALM</li>
+            <li>Test Management Tool: Test Rail</li>
+            <li>Project Management Tools: Agile (Scrum), JIRA, Confluence, MS Office Suite, Google Docs, SharePoint, Slack</li>
+            <li>Testing Methodology: Agile and Scrum Model, Kanban</li>
         </ul>
     </section>
 
-    <section>
+    <section id="experience">
         <h2>Professional Experience</h2>
-        <h3>RedCapCloud Inc (2018 - Present)</h3>
-        <p>Senior QA Consultant/Scrum Master | Health Care Domain</p>
-        
-        <h3>Tech Mahindra (2010 - 2018)</h3>
-        <ul>
-            <li>QA Lead/Scrum Master for Optus Professional Services (Telecom)</li>
-            <li>Test Analyst for British Telecom (Telecom)</li>
-        </ul>
+        <div class="experience">
+            <h3>RedCapCloud Inc (2018 - Present)</h3>
+            <p>Senior QA Consultant/Scrum Master | Health Care Domain</p>
+            <h3>Tech Mahindra (2010 - 2018)</h3>
+            <ul>
+                <li>QA Lead/Scrum Master for Optus Professional Services (Telecom)</li>
+                <li>Test Analyst for British Telecom (Telecom)</li>
+            </ul>
+        </div>
     </section>
 
-    <section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Details of key projects will go here, highlighting achievements and technologies used.</p>
+    </section>
+
+    <section id="education">
         <h2>Education</h2>
-        <ul>
+        <ul class="education">
             <li>M.S in Software Engineering, Birla Institute of Technology (7.5 CGPA)</li>
             <li>Bachelor's in Computer Technology, K.S.R. College of Technology (9.2 CGPA)</li>
         </ul>
     </section>
 
-    <section>
+    <section id="certifications">
         <h2>Certifications</h2>
-        <ul>
+        <ul class="certifications">
             <li>ISTQB Certified, Foundation Level in Software Testing</li>
             <li>Scrum.Org Certified PSM-1 Professional Scrum Master</li>
         </ul>
     </section>
 
-    <section>
+    <section id="contact">
         <h2>Contact Information</h2>
         <p>Address: Flat 203, Laa Moonstone Apartments, Neo Town road, Electronic City Phase-1, Bangalore, 560 100</p>
+        <a href="mailto:sindhus1713@gmail.com" class="button">Email Me</a>
     </section>
 
     <footer>
@@ -105,3 +188,4 @@
     </footer>
 </body>
 </html>
+
